@@ -127,7 +127,7 @@ async def chain_book_car(inbound, outbound, **kw):
           for _ in range(WORKERS_COUNT)])
 
 
-async def run_pipeline(inbound):
+def run_pipeline(inbound):
     offers_outbound = asyncio.Queue()
     filtered_outbound = asyncio.Queue()
     result_outbound = asyncio.Queue()
